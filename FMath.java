@@ -1,20 +1,22 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 import java.awt.SystemColor;
-import javax.swing.BoxLayout;
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.Label;
-import java.awt.Font;
-import java.awt.Button;
 import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.Button;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class FMath {
+public class FMath extends JFrame {
 
-	private JFrame frmInicio;
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -22,57 +24,56 @@ public class FMath {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					FMath window = new FMath();
-					window.frmInicio.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+
+				
 			}
 		});
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
 	public FMath() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmInicio = new JFrame();
-		frmInicio.getContentPane().setBackground(SystemColor.textHighlight);
-		frmInicio.getContentPane().setLayout(null);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 300, 400);
+		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.textHighlight);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		Label lblTITULO = new Label("F'Math");
-		lblTITULO.setForeground(Color.WHITE);
-		lblTITULO.setFont(new Font("Segoe UI", Font.ITALIC, 48));
-		lblTITULO.setAlignment(Label.CENTER);
-		lblTITULO.setBounds(62, 61, 185, 72);
-		frmInicio.getContentPane().add(lblTITULO);
-		
-		Button btnMatematica = new Button("Matematica");
-		btnMatematica.setForeground(Color.WHITE);
-		btnMatematica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));
-		btnMatematica.setBackground(SystemColor.textHighlight);
-		btnMatematica.setBounds(26, 254, 124, 59);
-		frmInicio.getContentPane().add(btnMatematica);
-		
-		Button btnFisica = new Button("Fisica");
-		btnFisica.setForeground(Color.WHITE);
-		btnFisica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));
-		btnFisica.setBackground(SystemColor.textHighlight);
-		btnFisica.setBounds(155, 254, 124, 59);
-		frmInicio.getContentPane().add(btnFisica);
+		JLabel lblFMath = new JLabel("F'Math");
+		lblFMath.setForeground(Color.WHITE);
+		lblFMath.setFont(new Font("Segoe UI", Font.ITALIC, 50));
+		lblFMath.setBounds(66, 48, 154, 47);
+		contentPane.add(lblFMath);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngocean.com (2).png"));
-		lblNewLabel.setBounds(95, 106, 163, 163);
-		frmInicio.getContentPane().add(lblNewLabel);
-		frmInicio.setBounds(100, 100, 321, 412);
-		frmInicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		lblNewLabel.setBounds(87, 106, 175, 138);
+		contentPane.add(lblNewLabel);
+		
+		Button btnMatematica = new Button("Matematica");
+		btnMatematica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Matematica fa=new Matematica();
+				fa.setVisible(true);
+				
+			}
+		});
+		btnMatematica.setForeground(Color.WHITE);
+		btnMatematica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));
+		btnMatematica.setBackground(SystemColor.textHighlight);
+		btnMatematica.setBounds(10, 250, 127, 47);
+		contentPane.add(btnMatematica);
+		
+		Button btnFisica = new Button("Fisica");
+		btnFisica.setForeground(Color.WHITE);
+		btnFisica.setBackground(SystemColor.textHighlight);
+		btnFisica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));
+		btnFisica.setBounds(155, 250, 119, 47);
+		contentPane.add(btnFisica);
 	}
+
 }
