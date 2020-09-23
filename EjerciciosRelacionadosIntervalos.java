@@ -222,7 +222,7 @@ public class EjerciciosRelacionadosIntervalos extends JFrame {
 		btnNewButton_4 = new JButton("Resultado");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					int result = count/6 * 100;
+					int result = count/4 * 100;
 					JOptionPane.showMessageDialog(null, "Calificación: " + result,"Resultados", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});

@@ -28,9 +28,6 @@ public class EjerciciosVectores extends JFrame {
 	private JTextField textField_2;
 	int count = 0; 
 	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_7;
 	/**
 	 * Launch the application.
 	 */
@@ -60,14 +57,14 @@ public class EjerciciosVectores extends JFrame {
 		txtpnFactorComn.setForeground(Color.WHITE);
 		txtpnFactorComn.setBackground(SystemColor.textHighlight);
 		txtpnFactorComn.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnFactorComn.setText("a). 2y = 4x +12");
-		txtpnFactorComn.setBounds(39, 101, 228, 34);
+		txtpnFactorComn.setText("a). Un vector AB tiene componentes (5,-2). Hallar las coordenadas de (A) si se conoce el extremo B=(12,-3).");
+		txtpnFactorComn.setBounds(39, 88, 386, 47);
 		contentPane.add(txtpnFactorComn);
 		
 
 		
 		JTextPane txtpnIRespondaA = new JTextPane();
-		txtpnIRespondaA.setText("i. Encuentre la pendiente de las siguientes funciones (y = mx + b)");
+		txtpnIRespondaA.setText("i. Resuelva los siguientes problemas");
 		txtpnIRespondaA.setForeground(Color.WHITE);
 		txtpnIRespondaA.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 16));
 		txtpnIRespondaA.setEditable(false);
@@ -76,12 +73,12 @@ public class EjerciciosVectores extends JFrame {
 		contentPane.add(txtpnIRespondaA);
 		
 		JTextPane txtpnB = new JTextPane();
-		txtpnB.setText("b). A = (2, 3) y B = (6, 5)");
+		txtpnB.setText("b). Calcular la distancia entre los puntos A=(2,1) y B=(-3,2).");
 		txtpnB.setForeground(Color.WHITE);
 		txtpnB.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
 		txtpnB.setEditable(false);
 		txtpnB.setBackground(SystemColor.textHighlight);
-		txtpnB.setBounds(39, 219, 185, 34);
+		txtpnB.setBounds(39, 219, 260, 50);
 		contentPane.add(txtpnB);
 		
 
@@ -96,7 +93,7 @@ public class EjerciciosVectores extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 				String text = textField.getText();
-				if(text.contains("2x+6")) {
+				if(text.contains("(7,-1)")) {
 					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
 					Image imagen = icon.getImage();
 					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
@@ -121,7 +118,7 @@ public class EjerciciosVectores extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(75, 260, 96, 19);
+		textField_2.setBounds(75, 279, 96, 19);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -130,7 +127,7 @@ public class EjerciciosVectores extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_2.getText();
-				if(text.contains("1/2x+2")){
+				if(text.contains("5.099")){
 					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
 					Image imagen = icon.getImage();
 					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
@@ -150,28 +147,28 @@ public class EjerciciosVectores extends JFrame {
 
 			}
 		});
-		btnNewButton_1.setBounds(76, 289, 95, 21);
+		btnNewButton_1.setBounds(76, 308, 95, 21);
 		contentPane.add(btnNewButton_1);
 		
 		JTextPane txtpnCx = new JTextPane();
-		txtpnCx.setText("c). 125a^3 + 8b^3");
+		txtpnCx.setText("c). Hallar las coordenadas del punto medio del segmento AB, de extremos A=(3,9) y B=(-1,5).");
 		txtpnCx.setForeground(Color.WHITE);
 		txtpnCx.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
 		txtpnCx.setEditable(false);
 		txtpnCx.setBackground(SystemColor.textHighlight);
-		txtpnCx.setBounds(39, 348, 185, 34);
+		txtpnCx.setBounds(39, 348, 306, 46);
 		contentPane.add(txtpnCx);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(75, 392, 96, 19);
+		textField_3.setBounds(75, 404, 96, 19);
 		contentPane.add(textField_3);
 		
 		JButton btnNewButton_1_1 = new JButton("Listo");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_3.getText();
-				if(text.contains("(5a+2b)(25a^2-10ab+4b^2)")){
+				if(text.contains("(1,7)")){
 					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
 					Image imagen = icon.getImage();
 					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
@@ -195,130 +192,8 @@ public class EjerciciosVectores extends JFrame {
 				
 			}
 		});
-		btnNewButton_1_1.setBounds(75, 421, 95, 21);
+		btnNewButton_1_1.setBounds(75, 433, 95, 21);
 		contentPane.add(btnNewButton_1_1);
-		
-		JTextPane txtpnDx = new JTextPane();
-		txtpnDx.setText("d). a^4 + 4a^2 +16");
-		txtpnDx.setForeground(Color.WHITE);
-		txtpnDx.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnDx.setEditable(false);
-		txtpnDx.setBackground(SystemColor.textHighlight);
-		txtpnDx.setBounds(466, 101, 185, 34);
-		contentPane.add(txtpnDx);
-		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(504, 145, 96, 19);
-		contentPane.add(textField_4);
-		
-		JButton btnNewButton_2 = new JButton("Listo");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String text = textField_4.getText();
-				if(text.contains("(a^2-2a+4)(a^2+2a+4")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
-					count++;
-				}
-				
-				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
-				}	
-			}
-		});
-		btnNewButton_2.setBounds(505, 174, 95, 21);
-		contentPane.add(btnNewButton_2);
-		
-		JTextPane txtpnB_1 = new JTextPane();
-		txtpnB_1.setText("e). 10x^2 - 5x + 15x^3");
-		txtpnB_1.setForeground(Color.WHITE);
-		txtpnB_1.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnB_1.setEditable(false);
-		txtpnB_1.setBackground(SystemColor.textHighlight);
-		txtpnB_1.setBounds(466, 219, 185, 34);
-		contentPane.add(txtpnB_1);
-		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(504, 260, 96, 19);
-		contentPane.add(textField_5);
-		
-		JButton btnNewButton_2_1 = new JButton("Listo");
-		btnNewButton_2_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String text = textField_5.getText();
-				if(text.contains("5x(3x^2+2x-1)")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
-					count++;
-				}
-				
-				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
-				}
-				
-			}
-		});
-		btnNewButton_2_1.setBounds(504, 288, 95, 21);
-		contentPane.add(btnNewButton_2_1);
-		
-		JTextPane txtpnB_1_1 = new JTextPane();
-		txtpnB_1_1.setText("f). 2y^2 - 6y +5y +15");
-		txtpnB_1_1.setForeground(Color.WHITE);
-		txtpnB_1_1.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnB_1_1.setEditable(false);
-		txtpnB_1_1.setBackground(SystemColor.textHighlight);
-		txtpnB_1_1.setBounds(466, 348, 185, 34);
-		contentPane.add(txtpnB_1_1);
-		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
-		textField_7.setBounds(504, 392, 96, 19);
-		contentPane.add(textField_7);
-		
-		JButton btnNewButton_2_1_1 = new JButton("Listo");
-		btnNewButton_2_1_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String text1 = textField_7.getText();
-				if(text1.contains("(y-3)(2y+5)")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
-					count++;
-				}
-				
-				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
-				}
-				
-			}
-		});
-		btnNewButton_2_1_1.setBounds(504, 421, 95, 21);
-		contentPane.add(btnNewButton_2_1_1);
 		
 		JButton btnEjercicios = new JButton("Resultados");
 		btnEjercicios.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -337,8 +212,8 @@ public class EjerciciosVectores extends JFrame {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				FuncionesLineales funci = new FuncionesLineales();
-				funci.setVisible(true);
+				Vectores vec = new Vectores();
+				vec.setVisible(true);
 				
 			}
 		});
@@ -347,58 +222,13 @@ public class EjerciciosVectores extends JFrame {
 		contentPane.add(btnNewButton_3);
 		
 		JTextPane txtpnY = new JTextPane();
-		txtpnY.setText("y =");
+		txtpnY.setText("B =");
 		txtpnY.setForeground(Color.WHITE);
 		txtpnY.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
 		txtpnY.setEditable(false);
 		txtpnY.setBackground(SystemColor.textHighlight);
 		txtpnY.setBounds(39, 140, 33, 34);
 		contentPane.add(txtpnY);
-		
-		JTextPane txtpnY_1 = new JTextPane();
-		txtpnY_1.setText("y =");
-		txtpnY_1.setForeground(Color.WHITE);
-		txtpnY_1.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnY_1.setEditable(false);
-		txtpnY_1.setBackground(SystemColor.textHighlight);
-		txtpnY_1.setBounds(39, 249, 33, 34);
-		contentPane.add(txtpnY_1);
-		
-		JTextPane txtpnY_2 = new JTextPane();
-		txtpnY_2.setText("y =");
-		txtpnY_2.setForeground(Color.WHITE);
-		txtpnY_2.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnY_2.setEditable(false);
-		txtpnY_2.setBackground(SystemColor.textHighlight);
-		txtpnY_2.setBounds(39, 389, 33, 34);
-		contentPane.add(txtpnY_2);
-		
-		JTextPane txtpnY_3 = new JTextPane();
-		txtpnY_3.setText("y =");
-		txtpnY_3.setForeground(Color.WHITE);
-		txtpnY_3.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnY_3.setEditable(false);
-		txtpnY_3.setBackground(SystemColor.textHighlight);
-		txtpnY_3.setBounds(466, 140, 33, 34);
-		contentPane.add(txtpnY_3);
-		
-		JTextPane txtpnY_3_1 = new JTextPane();
-		txtpnY_3_1.setText("y =");
-		txtpnY_3_1.setForeground(Color.WHITE);
-		txtpnY_3_1.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnY_3_1.setEditable(false);
-		txtpnY_3_1.setBackground(SystemColor.textHighlight);
-		txtpnY_3_1.setBounds(466, 260, 33, 34);
-		contentPane.add(txtpnY_3_1);
-		
-		JTextPane txtpnY_3_2 = new JTextPane();
-		txtpnY_3_2.setText("y =");
-		txtpnY_3_2.setForeground(Color.WHITE);
-		txtpnY_3_2.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 14));
-		txtpnY_3_2.setEditable(false);
-		txtpnY_3_2.setBackground(SystemColor.textHighlight);
-		txtpnY_3_2.setBounds(466, 389, 33, 34);
-		contentPane.add(txtpnY_3_2);
 		
 
 
