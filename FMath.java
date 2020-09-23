@@ -49,7 +49,7 @@ public class FMath extends JFrame {
 		contentPane.add(lblFMath);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngocean.com (2).png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\image1.jpeg"));
 		lblNewLabel.setBounds(87, 106, 175, 138);
 		contentPane.add(lblNewLabel);
 		
@@ -69,6 +69,13 @@ public class FMath extends JFrame {
 		contentPane.add(btnMatematica);
 		
 		Button btnFisica = new Button("Fisica");
+		btnFisica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Fisica fi = new Fisica();
+				fi.setVisible(true);
+			}
+		});
 		btnFisica.setForeground(Color.WHITE);
 		btnFisica.setBackground(SystemColor.textHighlight);
 		btnFisica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));

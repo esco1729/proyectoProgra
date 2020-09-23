@@ -36,6 +36,7 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 				
 			InterfazDeUsuarioContraseña frame = new InterfazDeUsuarioContraseña();
 			frame.setVisible(true);
+			
 				
 			}
 		});
@@ -89,6 +90,9 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 						
 						FMath window = new FMath();
 						window.setVisible(true);
+						
+						
+						
 					
 						
 					}
@@ -124,6 +128,9 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 		Contraseña = new JPasswordField();
 		Contraseña.setBounds(159, 143, 105, 20);
 		panel.add(Contraseña);
+		
+		
+		
 		
 		
 	}
