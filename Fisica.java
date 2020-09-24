@@ -11,6 +11,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import java.awt.Button;
 import java.awt.event.ActionListener;
@@ -44,8 +46,10 @@ public class Fisica extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		Image icon = new ImageIcon(this.getClass().getResource("/image2.jpeg")).getImage();
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngegg (1).png"));
+		lblNewLabel.setIcon(new ImageIcon(icon));
 		lblNewLabel.setBounds(10, 29, 209, 392);
 		contentPane.add(lblNewLabel);
 		

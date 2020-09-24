@@ -14,6 +14,7 @@ import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -49,13 +50,15 @@ public class FuncionesLineales extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programaci\u00F3n\\Proyecto\\todosLosArchivos\\tabla.jpg"));
+		Image icon = new ImageIcon(this.getClass().getResource("/tabla.jpg")).getImage();
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(icon));
 		lblNewLabel.setBounds(136, 415, 103, 51);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programaci\u00F3n\\Proyecto\\todosLosArchivos\\graph.jpg"));
+		Image icon1 = new ImageIcon(this.getClass().getResource("/graph.jpg")).getImage();
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(icon1));
 		lblNewLabel_1.setBounds(524, 38, 174, 205);
 		contentPane.add(lblNewLabel_1);
 		

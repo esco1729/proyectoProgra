@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.border.TitledBorder;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
@@ -85,8 +87,9 @@ public class TipoDeUsuario extends JFrame {
 		btnNewButton_1.setBounds(302, 249, 135, 37);
 		panel.add(btnNewButton_1);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programaci\u00F3n\\Proyecto\\todosLosArchivos\\100tifico.jpg"));
+		Image icon = new ImageIcon(this.getClass().getResource("/100tifico.jpg")).getImage();
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(icon));
 		lblNewLabel_1.setBounds(-131, -157, 974, 704);
 		panel.add(lblNewLabel_1);
 		

@@ -69,12 +69,12 @@ public class Conversiones extends JFrame {
 		JButton btnNewButton_1_2 = new JButton("Ver");
 		btnNewButton_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\fuerza.jpg");
+				Image icon = new ImageIcon(this.getClass().getResource("/fuerza.jpg")).getImage();
 				JFrame frame = new JFrame();
 				frame.getContentPane().setLayout(new FlowLayout());
 				frame.setSize(800,800);
 				JLabel lbl = new JLabel();
-				lbl.setIcon(icon);
+				lbl.setIcon(new ImageIcon(icon));
 				frame.getContentPane().add(lbl);
 				frame.setVisible(true);
 				
@@ -90,12 +90,12 @@ public class Conversiones extends JFrame {
 		JButton btnNewButton_1_1 = new JButton("Ver");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\velocidad.jpg");
+				Image icon = new ImageIcon(this.getClass().getResource("/velocidad.jpg")).getImage();
 				JFrame frame = new JFrame();
 				frame.getContentPane().setLayout(new FlowLayout());
 				frame.setSize(800,800);
 				JLabel lbl = new JLabel();
-				lbl.setIcon(icon);
+				lbl.setIcon(new ImageIcon(icon));
 				frame.getContentPane().add(lbl);
 				frame.setVisible(true);
 				
@@ -112,12 +112,12 @@ public class Conversiones extends JFrame {
 		JButton btnVer = new JButton("Ver");
 		btnVer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\longitud.jpg");
+				Image icon = new ImageIcon(this.getClass().getResource("/longitud.jpg")).getImage();
 				JFrame frame = new JFrame();
 				frame.getContentPane().setLayout(new FlowLayout());
 				frame.setSize(800,800);
 				JLabel lbl = new JLabel();
-				lbl.setIcon(icon);
+				lbl.setIcon(new ImageIcon(icon));
 				frame.getContentPane().add(lbl);
 				frame.setVisible(true);
 				
@@ -132,24 +132,25 @@ public class Conversiones extends JFrame {
 		JButton btnNewButton = new JButton("Ver");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\tiempo.jpg");
+				Image img = new ImageIcon(this.getClass().getResource("/tiempo.jpg")).getImage();
 				JFrame frame = new JFrame();
 				frame.getContentPane().setLayout(new FlowLayout());
 				frame.setSize(800,800);
 				JLabel lbl = new JLabel();
-				lbl.setIcon(icon);
+				lbl.setIcon(new ImageIcon(img));
 				frame.getContentPane().add(lbl);
 				frame.setVisible(true);
 				
 			}
 
-			
+		
 		});
 		btnNewButton.setBounds(586, 53, 85, 21);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programaci\u00F3n\\Proyecto\\todosLosArchivos\\fundamentales.jpg"));
+		Image img = new ImageIcon(this.getClass().getResource("/fundamentales.jpg")).getImage();
+		lblNewLabel.setIcon(new ImageIcon(img));
 		lblNewLabel.setBounds(32, 273, 378, 171);
 		contentPane.add(lblNewLabel);
 		btnEjercicios.setBounds(630, 490, 159, 34);

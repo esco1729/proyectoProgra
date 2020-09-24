@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -48,8 +49,10 @@ public class FMath extends JFrame {
 		lblFMath.setBounds(66, 48, 154, 47);
 		contentPane.add(lblFMath);
 		
+		
+		Image icon = new ImageIcon(this.getClass().getResource("/image1.jpeg")).getImage();
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\image1.jpeg"));
+		lblNewLabel.setIcon(new ImageIcon(icon));
 		lblNewLabel.setBounds(87, 106, 175, 138);
 		contentPane.add(lblNewLabel);
 		

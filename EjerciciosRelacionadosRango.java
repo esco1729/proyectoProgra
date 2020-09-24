@@ -140,21 +140,20 @@ public class EjerciciosRelacionadosRango extends JFrame {
 				String text = textField.getText();
 				String text1 = textField_1.getText();
 				if(text.contains("R")||text.contains("x>=-49/12") && text1.contains("R")||text1.contains("x>=-49/12")) {
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 				
 				
@@ -174,21 +173,20 @@ public class EjerciciosRelacionadosRango extends JFrame {
 						text1.contains("x<5/2")||text1.contains("x>5/2")||text1.contains("x<3/2")||text1.contains("x>3/2") &&
 				text2.contains("x<5/2")||text2.contains("x>5/2")||text2.contains("x<3/2")||text2.contains("x>3/2") &&
 				text3.contains("x<5/2")||text3.contains("x>5/2")||text3.contains("x<3/2")||text3.contains("x>3/2")) {
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 				
 			}
@@ -207,21 +205,20 @@ public class EjerciciosRelacionadosRango extends JFrame {
 						text1.contains("x<-3")||text1.contains("x>-3")||text1.contains("x<8/3")||text1.contains("x>8/3") &&
 				text2.contains("x<-3")||text2.contains("x>-3")||text2.contains("x<8/3")||text2.contains("x>8/3") &&
 				text3.contains("x<-3")||text3.contains("x>-3")||text3.contains("x<8/3")||text3.contains("x>8/3")) {
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 
 			}
@@ -235,21 +232,20 @@ public class EjerciciosRelacionadosRango extends JFrame {
 				String text = textField_10.getText();
 				String text1 = textField_11.getText();
 				if(text.contains("R")||text.contains("x>=-25/9") && text1.contains("R")||text1.contains("x>=-25/9")) {
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 				
 				

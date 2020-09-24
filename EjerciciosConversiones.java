@@ -97,20 +97,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField.getText();
 				if(text.contains("6605") && text.contains("lb")) {
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 					
 				
@@ -131,21 +131,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_2.getText();
 				if(text.contains("2268")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 
 			}
@@ -172,21 +171,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_3.getText();
 				if(text.contains("0.6096")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}	
 				
 				
@@ -217,21 +215,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_4.getText();
 				if(text.contains("8046.72")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}	
 			}
 		});
@@ -257,21 +254,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text = textField_5.getText();
 				if(text.contains("10800")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 				
 			}
@@ -298,21 +294,20 @@ public class EjerciciosConversiones extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String text1 = textField_7.getText();
 				if(text1.contains("5000")){
-					ImageIcon icon = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\check.jpg");
-					Image imagen = icon.getImage();
-					Image modificada = imagen.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon = new ImageIcon(modificada);
-					JOptionPane.showMessageDialog(null, "Bravo", "Correcto", JOptionPane.INFORMATION_MESSAGE, icon);
+					Image icon = new ImageIcon(this.getClass().getResource("/check.jpg")).getImage();
+					Image modificada = icon.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 					count++;
 				}
 				
 				else {
-					ImageIcon icon1 = new ImageIcon("C:\\Users\\liter\\OneDrive\\Escritorio\\Universidad\\Semestre II\\Programación\\Proyecto\\todosLosArchivos\\equis.jpg");
-					Image imagen1 = icon1.getImage();
-					Image modificada1 = imagen1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
-					icon1 = new ImageIcon(modificada1);
-					JOptionPane.showMessageDialog(null, "Sigue practicando", "Incorrecto", JOptionPane.INFORMATION_MESSAGE, icon1);
-					
+					Image icon1 = new ImageIcon(this.getClass().getResource("/equis.jpg")).getImage();
+					Image modificada = icon1.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+					JLabel lbl = new JLabel();
+					lbl.setIcon(new ImageIcon(modificada));
+					JOptionPane.showMessageDialog(null, lbl);
 				}
 				
 			}
