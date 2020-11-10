@@ -6,9 +6,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import java.awt.Font;
 import javax.swing.border.TitledBorder;
+
+
 import javax.swing.border.LineBorder;
 import java.awt.Color;
 import java.awt.SystemColor;
@@ -16,8 +19,17 @@ import javax.swing.JTextField;
 import javax.swing.JFormattedTextField;
 import java.awt.Button;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
+import javax.swing.ImageIcon;
+import java.sql.Connection;
+
 
 public class InterfazDeUsuarioContraseña extends JFrame {
 
@@ -25,7 +37,9 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 	private JTextField txtUsuario;
 	private BaseDeDatos inicio;
 	private JFrame frmInicio;
-	private JPasswordField Contraseña;
+	private JPasswordField txtContra;
+	private	JButton btnRegistrarse;
+	private JButton btnIngresar;
 
 	/**
 	 * Launch the application.
@@ -36,7 +50,6 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 				
 			InterfazDeUsuarioContraseña frame = new InterfazDeUsuarioContraseña();
 			frame.setVisible(true);
-			
 				
 			}
 		});
@@ -49,89 +62,127 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 	public InterfazDeUsuarioContraseña() {
 		inicio=new BaseDeDatos();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 340, 375);
+		setBounds(100, 100, 311, 452);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
 		JPanel panel = new JPanel();
-		panel.setBackground(SystemColor.textHighlight);
+		panel.setBackground(new Color(0, 128, 128));
 		panel.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255)), "Inicio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblInicioSesion = new JLabel("Iniciar Sesi\u00F3n");
-		lblInicioSesion.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 28));
-		lblInicioSesion.setBounds(72, 11, 172, 49);
-		panel.add(lblInicioSesion);
-		
 		txtUsuario = new JTextField();
-		txtUsuario.setBounds(159, 84, 105, 20);
+		txtUsuario.setBounds(55, 195, 172, 31);
 		panel.add(txtUsuario);
 		txtUsuario.setColumns(10);
 		
-		JLabel lblUsuario1 = new JLabel("Usuario:");
-		lblUsuario1.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 24));
-		lblUsuario1.setBounds(44, 71, 105, 31);
-		panel.add(lblUsuario1);
-		
-		JLabel lblContraseña = new JLabel("Contrase\u00F1a:");
-		lblContraseña.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 24));
-		lblContraseña.setBounds(17, 130, 132, 35);
-		panel.add(lblContraseña);
-		
-		Button btnIngresar = new Button("Ingresar");
-		btnIngresar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnIngresar = new JButton("Ingresar");
+		/*btnIngresar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 				
+				Connection conecion=null;
 				
-					if(txtUsuario.getText().equals(inicio.getUsuario()) && Contraseña.getText().equalsIgnoreCase(inicio.getContraseña())) {
-						
-						FMath window = new FMath();
-						window.setVisible(true);
-						
-						
-						
+				try {
+					Class.forName("com.mysql.jdbc.Driver");
 					
+					conecion= DriverManager.getConnection("jdbc:mysql://localhost:3306/fmathdatabase", "root", "Lolo1234");
+
+					Statement stm = conecion.createStatement();
+					
+					PreparedStatement ps = conecion.prepareStatement("select * from usuarios");
+					ResultSet rs = ps.executeQuery();
+					
+					boolean i=rs.next(),salir=false;
+
+					
+					while (i && !salir)
+					{
+						if(rs.getString(2).equals(txtUsuario.getText()) && rs.getString(3).equals(txtContra.getText())) {
+							
+							
+							FMath window = new FMath();
+							window.setVisible(true);
+							
+							System.out.println("¡Sesion iniciada con exito!");
+							
+							salir=true;
+							
+						}
+						else {
+							
+							System.out.println("Usuario o contraseña incorrectos");
+							salir=true;
+						}
 						
 					}
-					else {
-						
-						JOptionPane.showMessageDialog(null, "Usuario y Contraseña incorrectos...");
-						
-					}
 					
+				} catch (ClassNotFoundException e) {
 					
+					JOptionPane.showMessageDialog(null, "¡Error al cargar el controlador!");
+					
+					e.printStackTrace();
+				}
+				catch (SQLException e) {
+					
+					JOptionPane.showMessageDialog(null, "¡Error de Conexion!");
+					
+					e.printStackTrace();
+					
+				}
 				
-				
-			}
-		});
-		btnIngresar.setBounds(27, 210, 116, 31);
+			}});*/
+		
+		MiListener oyente = new MiListener();
+		btnIngresar.addActionListener(oyente);
+		btnIngresar.setBounds(17, 323, 116, 31);
 		panel.add(btnIngresar);
 		
-		Button btnRegistrarse = new Button("Registrarse");
-		btnRegistrarse.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				inicio.setUsuario(txtUsuario.getText());
-				inicio.setContraseña(Contraseña.getText());
-				
-			}
-			
-		});
-		
-		
-		btnRegistrarse.setBounds(159, 210, 105, 31);
+		btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.setBounds(160, 323, 116, 31);
 		panel.add(btnRegistrarse);
 		
-		Contraseña = new JPasswordField();
-		Contraseña.setBounds(159, 143, 105, 20);
-		panel.add(Contraseña);
+	
+		
+		btnRegistrarse.addActionListener(oyente);		
+		txtContra = new JPasswordField();
+		txtContra.setBounds(55, 257, 172, 31);
+		panel.add(txtContra);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngocean.com (5).png"));
+		lblNewLabel.setBounds(0, 79, 285, 347);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngocean.com (7).png"));
+		lblNewLabel_1.setBounds(0, 11, 137, 100);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("INICIAR SESI\u00D3N");
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setFont(new Font("Segoe UI", Font.ITALIC, 22));
+		lblNewLabel_2.setBounds(109, 35, 166, 45);
+		panel.add(lblNewLabel_2);
+		
+
 		
 		
-		
-		
+	}
+	private class MiListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			if (e.getSource() == btnRegistrarse) {
+				System.out.println("entre");
+				inicio.conexionBaseDatosRegistrar(txtUsuario.getText(), String.valueOf(txtContra.getPassword()));
+			}
+			if (e.getSource() == btnIngresar) {
+				inicio.conexionIngresar(txtUsuario.getText(), String.valueOf(txtContra.getPassword()));
+			}
+		}
 		
 	}
 }
