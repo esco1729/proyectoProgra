@@ -25,6 +25,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
@@ -40,6 +41,8 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 	private JPasswordField txtContra;
 	private	JButton btnRegistrarse;
 	private JButton btnIngresar;
+	private static InterfazDeUsuarioContraseña frame;
+	
 
 	/**
 	 * Launch the application.
@@ -48,9 +51,9 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				
-			InterfazDeUsuarioContraseña frame = new InterfazDeUsuarioContraseña();
+			 frame = new InterfazDeUsuarioContraseña();
 			frame.setVisible(true);
-				
+			
 			}
 		});
 	}
@@ -79,60 +82,6 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 		txtUsuario.setColumns(10);
 		
 		btnIngresar = new JButton("Ingresar");
-		/*btnIngresar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				Connection conecion=null;
-				
-				try {
-					Class.forName("com.mysql.jdbc.Driver");
-					
-					conecion= DriverManager.getConnection("jdbc:mysql://localhost:3306/fmathdatabase", "root", "Lolo1234");
-
-					Statement stm = conecion.createStatement();
-					
-					PreparedStatement ps = conecion.prepareStatement("select * from usuarios");
-					ResultSet rs = ps.executeQuery();
-					
-					boolean i=rs.next(),salir=false;
-
-					
-					while (i && !salir)
-					{
-						if(rs.getString(2).equals(txtUsuario.getText()) && rs.getString(3).equals(txtContra.getText())) {
-							
-							
-							FMath window = new FMath();
-							window.setVisible(true);
-							
-							System.out.println("¡Sesion iniciada con exito!");
-							
-							salir=true;
-							
-						}
-						else {
-							
-							System.out.println("Usuario o contraseña incorrectos");
-							salir=true;
-						}
-						
-					}
-					
-				} catch (ClassNotFoundException e) {
-					
-					JOptionPane.showMessageDialog(null, "¡Error al cargar el controlador!");
-					
-					e.printStackTrace();
-				}
-				catch (SQLException e) {
-					
-					JOptionPane.showMessageDialog(null, "¡Error de Conexion!");
-					
-					e.printStackTrace();
-					
-				}
-				
-			}});*/
 		
 		MiListener oyente = new MiListener();
 		btnIngresar.addActionListener(oyente);
@@ -166,22 +115,69 @@ public class InterfazDeUsuarioContraseña extends JFrame {
 		lblNewLabel_2.setBounds(109, 35, 166, 45);
 		panel.add(lblNewLabel_2);
 		
-
 		
 		
 	}
 	private class MiListener implements ActionListener{
-
+		int continuar = 0;
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
+
 			if (e.getSource() == btnRegistrarse) {
-				System.out.println("entre");
 				inicio.conexionBaseDatosRegistrar(txtUsuario.getText(), String.valueOf(txtContra.getPassword()));
+				continuar = 0;
 			}
 			if (e.getSource() == btnIngresar) {
-				inicio.conexionIngresar(txtUsuario.getText(), String.valueOf(txtContra.getPassword()));
+				
+				Connection conecion=null;
+				Statement stm=null;
+				ResultSet rs=null;
+				String dato="";
+				String contra="";
+				
+				try {
+					
+				conecion=inicio.conexion();
+				stm=conecion.createStatement();
+				rs=stm.executeQuery("SELECT * FROM usuarios");
+				
+				while(rs.next()) {
+					
+					dato=rs.getString(2);
+					contra=rs.getString(3);
+					
+					if(dato.equals(txtUsuario.getText()) && contra.equals(String.valueOf(txtContra.getText()))) {
+						
+						continuar=1;
+						
+					}
+					
+				}
+				
+				
+				}catch(SQLException u) {
+					
+					u.printStackTrace();
+					
+					
+				}
+				
 			}
+		
+			
+			if(continuar == 1) {
+				
+				FMath math=new FMath();
+				math.setVisible(true);
+				frame.setVisible(false);
+			}
+			else {
+				
+				JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrecta");
+				
+			}
+			
+			
 		}
 		
 	}

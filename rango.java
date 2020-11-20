@@ -66,10 +66,23 @@ public class rango extends JFrame {
 		btnEjercicios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EjerciciosRelacionadosRango ejeDR = new EjerciciosRelacionadosRango();
-				ejeDR.setvisible();
+				ejeDR.setVisible(true);
+				dispose();
 			}
 		});
 		btnEjercicios.setBounds(474, 244, 159, 34);
 		contentPane.add(btnEjercicios);
+		
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			Matematica math = new Matematica();
+			math.setVisible(true);
+			dispose();
+			
+			}
+		});
+		btnRegresar.setBounds(474, 288, 159, 34);
+		contentPane.add(btnRegresar);
 	}
 }

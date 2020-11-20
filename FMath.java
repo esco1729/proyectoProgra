@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,6 +18,9 @@ import java.awt.event.ActionEvent;
 public class FMath extends JFrame {
 
 	private JPanel contentPane;
+	private static FMath math;
+	
+
 
 	/**
 	 * Launch the application.
@@ -24,6 +28,7 @@ public class FMath extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				
 
 				
 			}
@@ -42,23 +47,27 @@ public class FMath extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
 		JLabel lblFMath = new JLabel("F'Math");
 		lblFMath.setForeground(Color.WHITE);
 		lblFMath.setFont(new Font("Segoe UI", Font.ITALIC, 50));
 		lblFMath.setBounds(66, 48, 154, 47);
 		contentPane.add(lblFMath);
 		
+		
+		Image icon = new ImageIcon(this.getClass().getResource("image1.jpeg")).getImage();
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngocean.com (2).png"));
+		lblNewLabel.setIcon(new ImageIcon(icon));
 		lblNewLabel.setBounds(87, 106, 175, 138);
 		contentPane.add(lblNewLabel);
 		
 		Button btnMatematica = new Button("Matematica");
 		btnMatematica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				Matematica fa=new Matematica();
 				fa.setVisible(true);
+				dispose();
+
 				
 			}
 		});
@@ -69,11 +78,31 @@ public class FMath extends JFrame {
 		contentPane.add(btnMatematica);
 		
 		Button btnFisica = new Button("Fisica");
+		btnFisica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Fisica fi = new Fisica();
+				fi.setVisible(true);
+				dispose();
+			}
+		});
 		btnFisica.setForeground(Color.WHITE);
 		btnFisica.setBackground(SystemColor.textHighlight);
 		btnFisica.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 15));
 		btnFisica.setBounds(155, 250, 119, 47);
 		contentPane.add(btnFisica);
+	}
+	
+	public static synchronized FMath getFMath()
+	{
+	    if(math == null)
+	    	
+	        math = new FMath();
+	    	
+
+	    return math;
+
+
 	}
 
 }

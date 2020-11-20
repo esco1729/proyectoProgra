@@ -12,6 +12,8 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Factorizacion extends JFrame {
 
@@ -41,6 +43,18 @@ public class Factorizacion extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnNewButton_3 = new JButton("Regresar");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Matematica math = new Matematica();
+				math.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_3.setBounds(10, 426, 159, 34);
+		contentPane.add(btnNewButton_3);
+		
 		JTextPane txtpnFactorComn = new JTextPane();
 		txtpnFactorComn.setEditable(false);
 		txtpnFactorComn.setForeground(Color.WHITE);
@@ -60,6 +74,13 @@ public class Factorizacion extends JFrame {
 		contentPane.add(txtpnEjemplosIFactor);
 		
 		JButton btnEjercicios = new JButton("Ejercicios Relacionados");
+		btnEjercicios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EjerciciosFactorizacion fact = new EjerciciosFactorizacion();
+				fact.setVisible(true);
+				dispose();
+			}
+		});
 		btnEjercicios.setBounds(565, 444, 159, 34);
 		contentPane.add(btnEjercicios);
 	}

@@ -67,7 +67,7 @@ public class BaseDeDatos {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			conecion= DriverManager.getConnection("jdbc:mysql://localhost:3306/fmathdatabase", "root", "Lolo1234");
+			conecion= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/fmathdatabase", "root", "nicollita7");
 			
 			
 			String query="INSERT INTO usuarios (Usuario,Clave) values('"+Usuario+"','"+Contraseña+"')";
@@ -104,7 +104,7 @@ public class BaseDeDatos {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			conecion= DriverManager.getConnection("jdbc:mysql://localhost:3306/fmathdatabase", "root", "");
+			conecion= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/fmathdatabase", "root", "nicollita7");
 
 			Statement stm =conecion.createStatement();
 			
@@ -132,6 +132,35 @@ public class BaseDeDatos {
 		
 		
 	}
+	
+	public Connection conexion() {
+		
+		Connection conecion=null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			conecion= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/fmathdatabase", "root", "nicollita7");
+			
+			
+		} catch (ClassNotFoundException e) {
+			
+			JOptionPane.showMessageDialog(null, "¡Error al cargar el controlador!");
+			
+			e.printStackTrace();
+		}
+		catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+		return conecion;
+		
+	}
+	
+		
+	}
 
 
-}
+

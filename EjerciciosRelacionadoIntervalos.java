@@ -38,6 +38,10 @@ public class EjerciciosRelacionadoIntervalos extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				
+				EjerciciosRelacionadosIntervalos in=new EjerciciosRelacionadosIntervalos();
+				in.setVisible(true);
+				
+				
 			}
 		});
 	}

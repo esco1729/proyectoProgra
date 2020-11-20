@@ -1,3 +1,4 @@
+
 //@autor
 //Micaela Yataz, 18960
 
@@ -17,7 +18,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-// importamos paquetes de erramientas que vamos a utilizar.
+// importamos paquetes de herramientas que vamos a utilizar.
 
 public class Intervalos extends JFrame {
 //creacion de clase intervalos
@@ -73,10 +74,27 @@ public class Intervalos extends JFrame {
 		JButton btnEjercicios = new JButton("Ejercicios Relacionados");
 		btnEjercicios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				EjerciciosRelacionadosIntervalos eje = new EjerciciosRelacionadosIntervalos();
+				eje.setVisible(true);
+				dispose();
+				
+				
 			}
 		});
 		btnEjercicios.setBounds(493, 202, 159, 34);
 		contentPane.add(btnEjercicios);
+		
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			Matematica math = new Matematica();
+			math.setVisible(true);
+			dispose();
+			
+			}
+		});
+		btnRegresar.setBounds(493, 252, 159, 34);
+		contentPane.add(btnRegresar);
 		//creamos un boton para que el usuario acceda a la serie de ejercicios que tiene que realizar.
 	}
 }

@@ -11,12 +11,14 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Matematica extends JFrame {
+public class Fisica extends JFrame {
 
 	private JPanel contentPane;
 
@@ -35,17 +37,19 @@ public class Matematica extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Matematica() {
+	public Fisica() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 594, 471);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.textHighlight);
-		contentPane.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255)), "Temas de Matematica ", TitledBorder.LEADING, TitledBorder.TOP, null, Color.YELLOW));
+		contentPane.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255)), "Temas de Fisica ", TitledBorder.LEADING, TitledBorder.TOP, null, Color.YELLOW));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		Image icon = new ImageIcon(this.getClass().getResource("image2.jpeg")).getImage();
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Destructor X\\Downloads\\pngegg (1).png"));
+		lblNewLabel.setIcon(new ImageIcon(icon));
 		lblNewLabel.setBounds(10, 29, 209, 392);
 		contentPane.add(lblNewLabel);
 		
@@ -55,17 +59,17 @@ public class Matematica extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblFactorizacion = new JLabel("Factorizaci\u00F3n");
+		JLabel lblFactorizacion = new JLabel("Conversi\u00F3n de unidades");
 		lblFactorizacion.setForeground(Color.BLACK);
 		lblFactorizacion.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 20));
-		lblFactorizacion.setBounds(27, 11, 122, 39);
+		lblFactorizacion.setBounds(27, 11, 259, 39);
 		panel.add(lblFactorizacion);
 		
 		Button btnVer = new Button("Ver");
 		btnVer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Factorizacion fra=new Factorizacion();
-				fra.setVisible(true);
+				Conversiones con=new Conversiones();
+				con.setVisible(true);
 				dispose();
 				
 			}
@@ -73,24 +77,7 @@ public class Matematica extends JFrame {
 		btnVer.setBounds(48, 56, 70, 22);
 		panel.add(btnVer);
 		
-		JLabel lbl = new JLabel("Intervalos");
-		lbl.setForeground(Color.BLACK);
-		lbl.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 20));
-		lbl.setBounds(205, 11, 95, 39);
-		panel.add(lbl);
-		
-		Button btnVerIntervalos = new Button("Ver");
-		btnVerIntervalos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Intervalos inter = new Intervalos();
-				inter.setVisible(true);
-				dispose();
-			}
-		});
-		btnVerIntervalos.setBounds(219, 56, 70, 22);
-		panel.add(btnVerIntervalos);
-		
-		JLabel lblDesigualdades = new JLabel("Desigualdades");
+		JLabel lblDesigualdades = new JLabel("Vectores");
 		lblDesigualdades.setForeground(Color.BLACK);
 		lblDesigualdades.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 20));
 		lblDesigualdades.setBounds(27, 84, 134, 39);
@@ -99,42 +86,25 @@ public class Matematica extends JFrame {
 		Button btnVerDesigualdades = new Button("Ver");
 		btnVerDesigualdades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Desigualdad des = new Desigualdad();
-				des.setVisible(true);
+				Vectores vec = new Vectores();
+				vec.setVisible(true);
 				dispose();
 			}
 		});
 		btnVerDesigualdades.setBounds(48, 129, 70, 22);
 		panel.add(btnVerDesigualdades);
 		
-		JLabel lblDominioYRango = new JLabel("Dominio y Rango");
-		lblDominioYRango.setForeground(Color.BLACK);
-		lblDominioYRango.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 20));
-		lblDominioYRango.setBounds(171, 90, 158, 27);
-		panel.add(lblDominioYRango);
-		
-		Button btnVerDominioyRango = new Button("Ver");
-		btnVerDominioyRango.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				rango dr = new rango();
-				dr.setVisible(true);
-				dispose();
-			}
-		});
-		btnVerDominioyRango.setBounds(219, 129, 70, 22);
-		panel.add(btnVerDominioyRango);
-		
-		JLabel lblFuncionesLineales = new JLabel("Funciones Lineales");
+		JLabel lblFuncionesLineales = new JLabel("Movimiento rectil\u00EDneo \r\nuniforme");
 		lblFuncionesLineales.setForeground(Color.BLACK);
 		lblFuncionesLineales.setFont(new Font("Segoe UI Symbol", Font.ITALIC, 20));
-		lblFuncionesLineales.setBounds(10, 157, 169, 39);
+		lblFuncionesLineales.setBounds(10, 157, 299, 39);
 		panel.add(lblFuncionesLineales);
 		
 		Button btnVerFuncionesLineales = new Button("Ver");
 		btnVerFuncionesLineales.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				FuncionesLineales fun = new FuncionesLineales() ;
-					fun.setVisible(true);
+				MRU mru = new MRU() ;
+					mru.setVisible(true);
 					dispose();
 				}
 			
@@ -149,9 +119,10 @@ public class Matematica extends JFrame {
 				fmath.setVisible(true);
 				dispose();
 				
+				
 			}
 		});
-		btnNewButton.setBounds(233, 358, 85, 21);
+		btnNewButton.setBounds(244, 362, 85, 21);
 		panel.add(btnNewButton);
 	}
 }
